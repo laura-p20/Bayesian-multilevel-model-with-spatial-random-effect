@@ -20,21 +20,20 @@ The following is the workflow to reproduce the results obtained in the analysis.
   - Run `Descriptive_statistics_maps.R`.
 
 - Samplers
-  - For the ICFES Saber 11 training dataset and the three scenario datasets, run `G_sampler_M1_v6_C++.R` to obtain the MCMC output for the first model. The `Sampler.cpp` file must be uploaded beforehand. The dataset and the MCMC settings, such as the burn-in period and thinning step, are specified as arguments within the code.
+  - For the ICFES Saber 11 training dataset and the three scenario datasets, run `G_sampler_M1_v6_C++.R` to obtain the MCMC output for the first model. The `Samplers.cpp` file must be uploaded beforehand. The dataset and the MCMC settings, such as the burn-in period and thinning step, are specified as arguments within the code.
   - For the Ridge model, run `G_sampler_Ridge_last_version.R`. The code uses the same arguments mentioned above and should be executed for the ICFES Saber 11 training dataset and the three scenario datasets.
   - For the Lasso model, run `G_sampler_Lasso_v2.R`. The code uses the same arguments mentioned above and should be executed for the ICFES Saber 11 training dataset and the three scenario datasets.
     
 - Simulation assessment
-  - 
+  - Run `Convergence_diagnosis_M2_simulation.R` to obtain the baseline's evluation metrics on the three simulated dataset.
+  - Run `Convergence_Ridge.R` to obtain the Ridge's evluation metrics on the three simulated dataset.
+  - Run `Convergence_diagnosis_Laso_simulation.R` to obtain the Lasso's evluation metrics on the three simulated dataset.
+
+- Real data assessment
+  - For the goddness of fit, and predictive perfomance evaluation run `Convergence_Evaluation_all_models.R` and `Posterior_inference_analysis.R`.
+  - For the inference analysis run `Results_Real_data_Rige.R`.
 
 
 ## Requirements
-- R / Python (specify version if needed)
-- Required packages or libraries
-
-## Usage
-Explain how to run the code:
-```bash
-# example
-python main.py
+- This projec was developed on R / C++ (version R.4.5.1.).
 
